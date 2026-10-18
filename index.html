@@ -8,16 +8,20 @@
 </head>
 <body>
     <div id="background-container">
-
+        <div id="logo-container">
+            <img src="odin-lined.png" alt="odin-logo">
+            <span id="logo-text">ODIN</span>
+        </div>
+        <div id="credit">Photo by Halie West on Unsplash</div>
     </div>
     <div id="right-side-container">
         <div id="hook-container">
-            <h1>This is not a real online service! You know you need
+            <h1 class="hook-text">This is not a real online service! You know you need
                 something like this in your life to help you realize
                 your deepest dreams. Sign up now to get started.
             </h1>
 
-            <h1>You know you want to.</h1>
+            <h1 class="hook-text">You know you want to.</h1>
         </div>
 
         <div id="form-container">
@@ -27,33 +31,33 @@
             <div class="form-row">
                 <div>
                     <label for="first-name">First Name</label>
-                    <input type="text" id="first-name" name="first_name">
+                    <input type="text" id="first-name" name="first_name" required>
                 </div>
                 <div>
                     <label for="last-name">Last Name</label>
-                    <input type="text" id="last-name" name="last_name">
+                    <input type="text" id="last-name" name="last_name" required>
                 </div>
             </div>
 
             <div class="form-row">
                 <div>
                     <label for="mail">Email</label>
-                    <input type="email" id="mail" name="mail">
+                    <input type="email" id="mail" name="mail" required>
                 </div>
                 <div>
                     <label for="phone-num">Phone Number</label>
-                    <input type="text" id="phone_num" name="phone-num">
+                    <input type="text" id="phone_num" name="phone-num" required>
                 </div>
             </div>
 
             <div class="form-row">
                 <div>
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password">
+                    <input type="password" id="password" name="password" required>
                 </div>
                 <div>
                     <label for="confirm-pass">Confirm Password</label>
-                    <input type="password" id="confirm-pass" name="confirm_pass">
+                    <input type="password" id="confirm-pass" name="confirm_pass" required>
                 </div>
             </div>
         </div>

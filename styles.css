@@ -21,18 +21,18 @@
     box-sizing: border-box;
 }
 
+body {
+    display: flex;
+}
+
 #hook-container, #form-container, #bottom-container {
     font-family: sans-serif;
     padding-left: 30px;
 }
 
-body {
-    display: flex;
-}
-
 #background-container {
-    width: 50%;
-    height: 100vh;
+    width: 30%;
+    min-height: 100vh;
     background-image: url(background.avif);
     background-repeat: no-repeat;
 }
@@ -40,21 +40,30 @@ body {
 #right-side-container {
     display: flex;
     flex-direction: column;
+    flex: 1;
+    min-height: 100vh;
     justify-content: center;
-    gap: 30px;
+}
+
+#hook-container, #bottom-container {
+    background-color: #FAF9F6;
+    flex: 1;
 }
 
 #form-container {
+    height: 30%;
     display: flex;
     flex-direction: column;
-    height: 30%;
     justify-content: space-evenly;
-    flex: 1;
+    background-color: white;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.19);
+    position: relative;
+    z-index: 1;
 }
 
 .form-row {
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
 .form-row div {
@@ -62,8 +71,80 @@ body {
     flex-direction: column;
 }
 
-#hook-container, #bottom-container {
-    background-color: #eeeeee;
-    flex: 1;
+#hook-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-bottom: 3rem;
+    font-size: 12px;
+    gap: 1.5rem;
 }
 
+#bottom-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    gap: 30px;
+}
+
+button {
+    max-width: 225px;
+    background-color: #596D48;
+    border-radius: 5px;
+    border: none;
+    height: 50px;
+    font-size: medium;
+    color: white;
+}
+
+.hook-text {
+    max-width: 48rem;
+}
+
+#logo-text {
+    font-family: "Norse";
+    font-size: 100px;
+    font-weight: bold;
+}
+
+#logo-text, #credit {
+    color: white;
+}
+
+#logo-container {
+    top: 250px;
+    position: relative;
+    height: 15%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.40);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    height: 90%;
+    width: auto;
+}
+
+#credit {
+    position: relative;
+    top: 750px;
+    left: 150px;
+}
+
+input {
+    border: solid #E5E7EB;
+    border-radius: 2px;
+    border-width: 1px;
+    height: 25px;
+}
+
+input[type="password"]:user-invalid {
+    border-color: red;
+}
+
+input:focus {
+    border-color: lightblue;
+    outline: none;
+}
